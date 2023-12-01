@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>How it works 02</title>
+		<!-- CSS -->
+		<link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<style >
+            .mobile-menu {
+         left: -150%;
+         transition: 0.5s;
+       }
+ 
+       .mobile-menu.active {
+         left: 0;
+       }
+
+        /* slider ----- */
+        .swiper-button-next{
+        margin-left: 987px;
+       }
+       .swiper-button-prev{
+        margin-left: 1122px;
+        margin-top: -4px;
+       }
+       .swiper-pagination{
+        margin-left: -508px;
+       }
+      .swiper-pagination-bullet{
+        background-color: rgba(60, 62, 74, 1) ;
+        width: 9px;
+        height: 9px;
+      }
+      .swiper-pagination-bullet-active{
+        background-color: rgb(101, 105, 122, 1);
+        width: 11px;
+        height: 11px;
+      }
+      @media screen and (max-width: 640px) {
+        .swiper-button-next{
+        display: none;
+       }
+       .swiper-button-prev{
+        display: none;
+       }
+       .swiper-pagination{
+        margin-left: -93px;
+       }
+      }
+      @media screen and (max-width: 768px) {
+        .swiper-button-next{
+        display: none;
+       }
+       .swiper-button-prev{
+        display: none;
+       }
+       .swiper-pagination{
+        margin-left: -297px;
+       }
+      }
+     </style>
+         
+     </head>
+     <body>
+      <nav class="relative z-[999] bg-[#12141D] text-white py-0 sm:py-5">
+        <div class="max-w-[1170px] mx-auto px-5">
+          <div class="flex justify-between items-center">
+          <div class="flex justify-center items-center">
+            <a  href="./index.html" rel="noopener noreferrer"
+            ><img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/thVjIT9cev8yBLQvVgPK1690641259.webp" alt="logo"
+          /></a>
+          <ul class="hidden md:flex space-x-6 ml-[130px] py-5 text-[13px] font-medium text-gray-400 tracking-[-0.13px]">
+            <li class="relative flex items-center group">
+              <a class="" href="">Pricing</a>
+              <svg
+              class="ml-2 group-hover:rotate-180 transition-all duration-200 ease-in-out"
+              width="13"
+              height="8"
+              viewBox="0 0 13 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+              class="fill-[#686868] group-hover:fill-[#686868]"
+              d="M6.77833 7.5L13.0001 1.27778L11.5557 0L6.77833 4.5L2.05566 0L0.555664 1.27778L6.77833 7.5Z"
+              fill="white" />
+              </svg>
+              <div class="w-[160px] absolute hidden group-hover:block bg-white bg-opacity-100 top-full transition-all duration-500 ease-in-out rounded-[6px]">
+                <ul class="p-5 text-[13px]  text-black font-medium">
+                  <a href="./pricing-page.html"><li>Pricing Page One</li></a>
+                  <a href="./pricing-page-two.html"><li>Pricing Page Two</li></a>
+                  <a href="./pricing-page-three.html"><li>Pricing Page Three</li></a>
+                </ul>
+              </div>
+            </li>
+            <li class="relative flex items-center group">
+              <a class="" href="">How it works</a>
+              <svg
+              class="ml-2 group-hover:rotate-180 transition-all duration-200 ease-in-out"
+              width="13"
+              height="8"
+              viewBox="0 0 13 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+              class="fill-[#686868] group-hover:fill-[#686868]"
+              d="M6.77833 7.5L13.0001 1.27778L11.5557 0L6.77833 4.5L2.05566 0L0.555664 1.27778L6.77833 7.5Z"
+              fill="white" />
+              </svg>
+              <div class="w-[170px] absolute hidden group-hover:block bg-white bg-opacity-100 top-full transition-all duration-500 ease-in-out rounded-[6px]">
+                <ul class="p-5 text-[13px]  text-black font-medium">
+                  <a href="./how-it-work-one.html"><li>How it works One</li></a>
+                  <a href="./how-it-work-two.html"><li>How it works Two</li></a>
+                  <a href="./how-it-work-three.html"><li>How it works Three</li></a>
+                </ul>
+              </div>
+            </li>
+            <li class="relative flex items-center group">
+              <a class="" href="">Knowledge base</a>
+              <svg
+              class="ml-2 group-hover:rotate-180 transition-all duration-200 ease-in-out"
+              width="13"
+              height="8"
+              viewBox="0 0 13 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+              class="fill-[#686868] group-hover:fill-[#686868]"
+              d="M6.77833 7.5L13.0001 1.27778L11.5557 0L6.77833 4.5L2.05566 0L0.555664 1.27778L6.77833 7.5Z"
+              fill="white" />
+              </svg>
+              <div class="w-[170px] absolute hidden group-hover:block bg-white bg-opacity-100 top-full transition-all duration-500 ease-in-out rounded-[6px]">
+                <ul class="p-5 text-[13px]  text-black font-medium">
+                  <a href="./knowledge-base-one.html"><li>Knowledge base One</li></a>
+                  <a href="./knowledge-base-two.html"><li>Knowledge base Two</li></a>
+                </ul>
+              </div>
+            </li>
+            <li class="relative flex items-center group">
+              <a class="" href="">FAQ</a>
+              <svg
+              class="ml-2 group-hover:rotate-180 transition-all duration-200 ease-in-out"
+              width="13"
+              height="8"
+              viewBox="0 0 13 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+              class="fill-[#686868] group-hover:fill-[#686868]"
+              d="M6.77833 7.5L13.0001 1.27778L11.5557 0L6.77833 4.5L2.05566 0L0.555664 1.27778L6.77833 7.5Z"
+              fill="white" />
+              </svg>
+              <div class="w-[130px] absolute hidden group-hover:block bg-white bg-opacity-100 top-full transition-all duration-500 ease-in-out rounded-[6px]">
+                <ul class="p-5 text-[13px]  text-black font-medium">
+                  <a href="./faq-page-one.html"><li>FAQ One</li></a>
+                  <a href="./faq-page-two.html"><li>FAQ Two</li></a>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          </div>
+      
+          <div class="flex justify-center items-center">
+          <a href="#" class="px-[15px] py-2 mr-[18px] cursor-pointer text-center bg-[#1D1F29] hover:bg-[#FFFEFF] hover:text-black rounded-[4px] font-semibold text-base text-white hidden md:block">Sign in</a>
+          <a href="#" class="px-[15px] py-2  cursor-pointer  bg-[#FFFEFF] hover:bg-[#1D1F29] hover:text-white rounded-[4px] font-semibold text-center text-base text-black hidden md:block">Sign up</a>
+          </div>
+  
+          <!-- Mobile menu icon -->
+          <div id="openMenuIcon" class="md:hidden inline-block cursor-pointer">
+            <svg
+            width="24"
+            height="18"
+            viewBox="0 0 38 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0 2C0 0.895431 0.895431 0 2 0H35.9478C37.0524 0 37.9478 0.895431 37.9478 2C37.9478 3.10457 37.0524 4 35.9478 4H2C0.895431 4 0 3.10457 0 2Z"
+              fill="#ffffff"/>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0 15.0233C0 13.9187 0.895431 13.0233 2 13.0233H35.9478C37.0524 13.0233 37.9478 13.9187 37.9478 15.0233C37.9478 16.1278 37.0524 17.0233 35.9478 17.0233H2C0.895431 17.0233 0 16.1278 0 15.0233Z"
+              fill="#ffffff"/>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0 28.0465C0 26.9419 0.895431 26.0465 2 26.0465H35.9478C37.0524 26.0465 37.9478 26.9419 37.9478 28.0465C37.9478 29.1511 37.0524 30.0465 35.9478 30.0465H2C0.895431 30.0465 0 29.1511 0 28.0465Z"
+              fill="#ffffff"/>
+            </svg>
+          </div>
+          </div>
+          <!-- Mobile menu -->
+          <div class="md:hidden flex justify-center w-full ">
+          <div id="mobile-content" class="mobile-menu absolute top-0 w-full bg-[#23272C] px-5 pt-5">
+            <!-- add hidden here later -->
+            <div class="flex justify-between items-center">
+              <a  href="/" rel="noopener noreferrer"
+              ><img class="w-[150px] sm:w-[90px]" src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/thVjIT9cev8yBLQvVgPK1690641259.webp" alt="logo"
+            /></a>
+              <div id="closeMenuIcon" class="md:hidden inline-block cursor-pointer">
+                <svg
+                width="31"
+                height="30"
+                viewBox="0 0 31 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.42367 27.8804C0.6374 27.1046 0.6374 25.8468 1.42367 25.071L25.4095 1.40504C26.1958 0.629247 27.4706 0.629246 28.2568 1.40503C29.0431 2.18082 29.0431 3.43863 28.2568 4.21442L4.27102 27.8804C3.48475 28.6562 2.20995 28.6562 1.42367 27.8804Z"
+                  fill="#ffffff"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.93793 1.40469C2.7242 0.628901 3.999 0.628901 4.78528 1.40469L28.7711 25.0707C29.5574 25.8465 29.5574 27.1043 28.7711 27.8801C27.9848 28.6559 26.71 28.6559 25.9238 27.8801L1.93793 4.21407C1.15166 3.43828 1.15166 2.18048 1.93793 1.40469Z"
+                  fill="#ffffff"
+                />
+                </svg>
+              </div>
+            </div>
+            <ul class="mt-4 leading-9 font-bold h-screen pt-5 relative">
+            <li class="relative flex items-center group">
+              <a class="" href="">Pricing</a>
+              <svg
+              class="ml-2 group-hover:rotate-180 transition-all duration-200 ease-in-out"
+              width="13"
+              height="8"
+              viewBox="0 0 13 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+              class="fill-[#686868] group-hover:fill-[#686868]"
+              d="M6.77833 7.5L13.0001 1.27778L11.5557 0L6.77833 4.5L2.05566 0L0.555664 1.27778L6.77833 7.5Z"
+              fill="white" />
+              </svg>
+              <div class="w-[200px] absolute hidden group-hover:block bg-white bg-opacity-100 top-full transition-all duration-500 ease-in-out">
+                <ul class="p-5">
+                  <a href="./pricing-page.html"><li>Pricing One</li></a>
+                  <a href="./pricing-page-two.html"><li>Pricing Two</li></a>
+                  <a href="./pricing-page-three.html"><li>Pricing Three</li></a>
+                </ul>
+              </div>
+            </li>
+            <li class="relative flex items-center group">
+              <a class="" href="">How it works</a>
+              <svg
+              class="ml-2 group-hover:rotate-180 transition-all duration-200 ease-in-out"
+              width="13"
+              height="8"
+              viewBox="0 0 13 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+              class="fill-[#686868] group-hover:fill-[#686868]"
+              d="M6.77833 7.5L13.0001 1.27778L11.5557 0L6.77833 4.5L2.05566 0L0.555664 1.27778L6.77833 7.5Z"
+              fill="white" />
+              </svg>
+              <div class="w-[200px] absolute hidden group-hover:block bg-white bg-opacity-100 top-full transition-all duration-500 ease-in-out">
+                <ul class="p-5">
+                  <a href="./how-it-work-one.html"><li>How it works One</li></a>
+                  <a href="./how-it-work-two.html"><li>How it works Two</li></a>
+                  <a href="./how-it-work-three.html"><li>How it works Three</li></a>
+                </ul>
+              </div>
+            </li>
+            <li class="relative flex items-center group">
+              <a class="" href="">Knowledge base</a>
+              <svg
+              class="ml-2 group-hover:rotate-180 transition-all duration-200 ease-in-out"
+              width="13"
+              height="8"
+              viewBox="0 0 13 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+              class="fill-[#686868] group-hover:fill-[#686868]"
+              d="M6.77833 7.5L13.0001 1.27778L11.5557 0L6.77833 4.5L2.05566 0L0.555664 1.27778L6.77833 7.5Z"
+              fill="white" />
+              </svg>
+              <div class="w-[200px] absolute hidden group-hover:block bg-white bg-opacity-100 top-full transition-all duration-500 ease-in-out">
+                <ul class="p-5">
+                  <a href="./knowledge-base-one.html"><li>Knowledge base One</li></a>
+                  <a href="./knowledge-base-two.html"><li>Knowledge base Two</li></a>
+                </ul>
+              </div>
+            </li>
+            <li class="relative flex items-center group">
+              <a class="" href="">FAQ</a>
+              <svg
+              class="ml-2 group-hover:rotate-180 transition-all duration-200 ease-in-out"
+              width="13"
+              height="8"
+              viewBox="0 0 13 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+              class="fill-[#686868] group-hover:fill-[#686868]"
+              d="M6.77833 7.5L13.0001 1.27778L11.5557 0L6.77833 4.5L2.05566 0L0.555664 1.27778L6.77833 7.5Z"
+              fill="white" />
+              </svg>
+              <div class="w-[200px] absolute hidden group-hover:block bg-white bg-opacity-100 top-full transition-all duration-500 ease-in-out">
+                <ul class="p-5">
+                  <a href="./faq-page-one.html"><li>FAQ One</li></a>
+                  <a href="./faq-page-two.html"><li>FAQ Two</li></a>
+                </ul>
+              </div>
+            </li>
+      
+            <li>
+              <a
+              href="#"
+              target="_blank"
+              class="w-[74px] h-[34px] cursor-pointer text-center bg-[#1D1F29] rounded-[4px] font-semibold text-base text-white hidden md:block"
+              >Sign in</a>
+            </li>
+            </ul>
+          </div>
+          </div>
+        </div>
+        </nav>
+		<main class="font-inter">
+			<!--  HOW IT WORK---->
+      <section class="flex justify-center mx-auto px-5 bg-[#12141D]">
+        <div class="max-w-[1440px] mx-auto pt-[20px]  text-center">
+          <h1 class="text-center text-white text-[26px] sm:text-[42px] font-bold leading-[56px] pb-[40px] sm:pb-[65px]">
+            How it works
+          </h1>
+          <div class="max-w-[1170px] bg-[#1E2029] rounded-[20px]">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 sm:gap-x-[110px] gap-y-5 sm:gap-y-[65px] max-w-[1170px] bg-[#1E2029] py-10 sm:py-[80px] px-5 sm:px-[100px] mx-auto rounded-[20px]">
+                    <div class="w-[240px] sm:w-[290px] lg:w-[260px] text-center px-5 pb-[30px]  mx-auto ">
+                        <div
+                        class="w-[50px] h-[50px] rounded-full bg-[#0F161B] text-white mb-[30px] flex justify-center items-center">
+                        01
+                      </div>
+                        <div class="flex justify-center items-center  bg-[#272932] w-[200px] sm:w-[250px] lg:w-[218px] rounded-[12px]">
+                          <img class="w-[100px] sm:w-[130px] md:w-[110px] py-[13px]" src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/THYclbjWaJIrY4fpeppQ1690466670.webp" alt="">
+                        </div>
+                        <h3 class="text-[18px] sm:text-[24px] text-white pt-[30px] font-semibold tracking-[-0.2px]">Add Website</h3>
+                        <p class="w-[200px] sm:w-[250px] lg:w-[218px] text-[12px] sm:text-[16px] text-[#696B76] pt-[10px] font-normal leading-[24px] tracking-[-0.32px]">Nettracking gives you an innovative web-based tool that manages, filters and reports on your website's</p>
+                    </div>
+                    <div class="w-[240px] sm:w-[290px] lg:w-[260px] text-center px-5 pb-[30px]  mx-auto">
+                        <div
+                        class="w-[50px] h-[50px] rounded-full bg-[#0F161B] text-white mb-[30px] flex justify-center items-center">
+                        02
+                      </div>
+                      <div class="flex justify-center items-center  bg-[#272932] w-[200px] sm:w-[250px] lg:w-[218px] rounded-[12px]">
+                        <img class="w-[100px] sm:w-[130px] md:w-[110px] py-[13px]" src=" https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/1e7AE0NxcaTfKQBpWpbS1690466699.webp" alt="">
+                      </div>
+                        
+                        <h3 class="text-[18px] sm:text-[24px] text-white pt-[26px] font-semibold tracking-[-0.2px]">Get Tracking Code</h3>
+                        <p class="w-[200px] sm:w-[250px] lg:w-[218px] text-[12px] sm:text-[16px] text-[#696B76] pt-[10px] font-normal leading-[24px] tracking-[-0.32px]">filters and reports on your website's search engine ranking results. In short, nettracking gives you the information</p>
+                    </div>
+                    <div class="w-[240px] sm:w-[290px] lg:w-[260px] text-center px-5 pb-[30px]  mx-auto">
+                        <div
+                        class="w-[50px] h-[50px] rounded-full bg-[#0F161B] text-white mb-[30px] flex justify-center items-center">
+                        03
+                      </div>
+                      <div class="flex justify-center items-center  bg-[#272932] w-[200px] sm:w-[250px] lg:w-[218px] rounded-[12px]">
+                        <img class="w-[100px] sm:w-[130px] md:w-[156px] lg:w-[156px] py-[13px] text-center" src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/hBysL9KByInSinWSsyHl1691906279.webp" alt="">
+                      </div>
+                       
+                        <h3 class="text-[18px] sm:text-[24px] text-white pt-[26px] font-semibold tracking-[-0.2px]">Start Tracking</h3>
+                        <p class="w-[200px] sm:w-[250px] lg:w-[218px] text-[12px] sm:text-[16px] text-[#696B76] pt-[10px] font-normal leading-[24px] tracking-[-0.32px]">Nettracking gives you an innovative web-based tool that manages multiple sites</p>
+                    </div>
+                 </div>
+               
+        </div>
+      </section>
+          
+    <!-- SWIPER SLIDER ---------- -->
+    <section class="  bg-[#12141D]">
+      <h1 class="text-[26px] mx-auto sm:text-[42px] font-bold leading-[46px] tracking-[-0.84pxpx] text-white text-center pt-[50px] pb-[15px]">Need Help Growing Your Business?</h1>
+      <p class=" mx-auto text-[12px] sm:text-[16px] tracking-[-0.32px] leading-[24px] text-center font-normal text-[#696B76]">Nettracking is designed with an integrated tracking system that allows customers to track their package</p>
+        <!-- Swiper -->
+      <div class="swiper tips-and-tricks-slider max-w-[1170px] mx-auto py-[70px]">
+        <div class="swiper-wrapper ">
+          <div class="swiper-slide  ">
+            <div class=" w-[370px] mx-auto  bg-[#1E2029] rounded-[20px] ">
+                <div class=" flex justify-center items-center w-[370px] h-[250px] mx-auto bg-[#272932] rounded-[20px]">
+                    <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/HHGDo6f7qqCruMGjfMs41691049034.webp" alt="">
+                </div>
+                <p class="text-[14px] sm:text-[16px] text-[#696B76] py-[30px] pl-[20px] italic font-medium leading-[30px] tracking-[-0.32px]">FOMO Popups on WordPress: Step-by-Step Setup Guide</p>
+            </div>
+        </div>
+          <div class="swiper-slide">
+            <div class=" w-[370px] mx-auto bg-[#1E2029] rounded-[20px] ">
+                <div class=" flex justify-center items-center w-[370px] h-[250px] mx-auto bg-[#272932] rounded-[20px]">
+                    <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/Bv5EEMjeMeV2P0sXCd4U1691049100.webp" alt="">
+                </div>
+                <p class="text-[14px] sm:text-[16px] text-[#696B76] py-[30px] pl-[20px] italic font-medium leading-[30px] tracking-[-0.32px]">FOMO Popups on WordPress: Step-by-Step Setup Guide</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class=" w-[370px] mx-auto bg-[#1E2029] rounded-[20px] ">
+                <div class=" flex justify-center items-center w-[370px] h-[250px] mx-auto bg-[#272932] rounded-[20px]">
+                    <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/RUfyc9bQlbTj1HFmEqYl1691049126.webp" alt="">
+                </div>
+                <p class="text-[14px] sm:text-[16px] text-[#696B76] py-[30px] pl-[20px] italic font-medium leading-[30px] tracking-[-0.32px]">FOMO Popups on WordPress: Step-by-Step Setup Guide</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class=" w-[370px] mx-auto bg-[#1E2029] rounded-[20px] ">
+                <div class=" flex justify-center items-center w-[370px] h-[250px] mx-auto bg-[#272932] rounded-[20px]">
+                    <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/HHGDo6f7qqCruMGjfMs41691049034.webp" alt="">
+                </div>
+                <p class="text-[14px] sm:text-[16px] text-[#696B76] py-[30px] pl-[20px] italic font-medium leading-[30px] tracking-[-0.32px]">FOMO Popups on WordPress: Step-by-Step Setup Guide</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class=" w-[370px] mx-auto bg-[#1E2029] rounded-[20px] ">
+              <div class=" flex justify-center items-center w-[370px] h-[250px] mx-auto bg-[#272932] rounded-[20px]">
+                  <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/HHGDo6f7qqCruMGjfMs41691049034.webp" alt="">
+              </div>
+              <p class="text-[14px] sm:text-[16px] text-[#696B76] py-[30px] pl-[20px] italic font-medium leading-[30px] tracking-[-0.32px]">FOMO Popups on WordPress: Step-by-Step Setup Guide</p>
+          </div>
+          </div>
+          <div class="swiper-slide">
+            <div class=" w-[370px] mx-auto bg-[#1E2029] rounded-[20px] ">
+              <div class=" flex justify-center items-center w-[370px] h-[250px] mx-auto bg-[#272932] rounded-[20px]">
+                  <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/HHGDo6f7qqCruMGjfMs41691049034.webp" alt="">
+              </div>
+              <p class="text-[14px] sm:text-[16px] text-[#696B76] py-[30px] pl-[20px] italic font-medium leading-[30px] tracking-[-0.32px]">FOMO Popups on WordPress: Step-by-Step Setup Guide</p>
+          </div>
+          </div>
+          <div class="swiper-slide">
+            <div class=" w-[370px] mx-auto bg-[#1E2029] rounded-[20px] ">
+              <div class=" flex justify-center items-center w-[370px] h-[250px] mx-auto bg-[#272932] rounded-[20px]">
+                  <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/HHGDo6f7qqCruMGjfMs41691049034.webp" alt="">
+              </div>
+              <p class="text-[14px] sm:text-[16px] text-[#696B76] py-[30px] pl-[20px] italic font-medium leading-[30px] tracking-[-0.32px]">FOMO Popups on WordPress: Step-by-Step Setup Guide</p>
+          </div>
+          </div>
+          <div class="swiper-slide">
+            <div class=" w-[370px] mx-auto bg-[#1E2029] rounded-[20px] ">
+              <div class=" flex justify-center items-center w-[370px] h-[250px] mx-auto bg-[#272932] rounded-[20px]">
+                  <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/HHGDo6f7qqCruMGjfMs41691049034.webp" alt="">
+              </div>
+              <p class="text-[14px] sm:text-[16px] text-[#696B76] py-[30px] pl-[20px] italic font-medium leading-[30px] tracking-[-0.32px]">FOMO Popups on WordPress: Step-by-Step Setup Guide</p>
+          </div>
+          </div>
+          
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        
+        </div>
+      </section>
+		</main>
+
+    <!-- FOOTER START ------------>
+    <footer class="bg-[#12141D] pt-[40px] sm:pt-[109px]">
+			<div class="container mx-auto px-4">
+			  <div class="flex flex-wrap justify-between items-top max-w-[1170px] mx-auto">
+				<!-- Column 1 -->
+				<div class="w-full md:w-1/4 px-4">
+				  <h4 class="text-2xl font-bold pb-2 text-white">Nettracking</h4>
+				  <p class="max-w-[209px] text-sm text-[#696B76] pb-4">
+					We saw our customers confusing us with some of the other companies in the industry
+				  </p>
+				  <div class="flex pt-4">
+					<button class="bg-white shadow-lg font-normal h-10 w-10 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+					  <i class="fab fa-twitter"></i>
+					</button>
+					<button class="bg-white shadow-lg font-normal h-10 w-10 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+					  <i class="fab fa-facebook-square"></i>
+					</button>
+					<button class="bg-white shadow-lg font-normal h-10 w-10 flex items-center justify-center align-center rounded-full outline-none focus:outline-none" type="button">
+					  <i class="fab fa-instagram"></i>
+					</button>
+				  </div>
+				</div>
+				<!-- Column 2 -->
+				<div class="w-full md:w-1/4 px-4">
+				  <span class="block pb-4 text-white text-lg font-medium">Product</span>
+				  <ul class="list-none">
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Product</a>
+					</li>
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Features</a>
+					</li>
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Pricing</a>
+					</li>
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Case Studies</a>
+					</li>
+				  </ul>
+				</div>
+				<!-- Column 3 -->
+				<div class="w-full md:w-1/4 px-4">
+				  <span class="block pb-4 text-white text-lg font-medium">Service</span>
+				  <ul class="list-none">
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Blog</a>
+					</li>
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Road Map</a>
+					</li>
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Testimonials</a>
+					</li>
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Good Tear</a>
+					</li>
+				  </ul>
+				</div>
+				<!-- Column 4 -->
+				<div class="w-full md:w-1/4 px-4">
+				  <span class="block pb-4 text-white text-lg font-medium">Solutions</span>
+				  <ul class="list-none">
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Process Management</a>
+					</li>
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Request Management</a>
+					</li>
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Workflow Management</a>
+					</li>
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Finance</a>
+					</li>
+				  </ul>
+				</div>
+			  </div>
+			</div>
+			<div class="bg-[#1E2029]">
+			  <div class="container mx-auto">
+				<div class="py-4 text-center text-[#5A5C68] text-sm font-normal">
+				  <p>
+					<a href="#" class="hover:text-white">&copy; Copyright 2021 by UIHUT. All rights reserved.</a>
+				  </p>
+				</div>
+			  </div>
+			</div>
+		  </footer>
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper(".tips-and-tricks-slider", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints:{
+      640:{
+        slidesPerView: 2,
+    spaceBetween: 30,
+      },
+      1280:{
+        slidesPerView: 3,
+    spaceBetween: 40,
+      },
+    },
+    navigation: {
+     nextEl: ".swiper-button-next",
+     prevEl: ".swiper-button-prev",
+   },
+  });
+</script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+		<script src="./include-html.js"></script>
+		<script src="./app.js"></script>
+	</body>
+</html>

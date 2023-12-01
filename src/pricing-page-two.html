@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pricing Page 02</title>
+		<!-- CSS -->
+		<link href="./output.css" rel="stylesheet">
+	
+		<style>
+	.mobile-menu {
+	   left: -150%;
+	   transition: 0.5s;
+	 }
+
+	 .mobile-menu.active {
+	   left: 0;
+	 }
+
+	 /* pricing  */
+	 .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: -4px;
+  left: 0;
+  right: 0;
+  bottom: 6px;
+  background-color: #04AA69;
+  -webkit-transition: 0.4s;
+
+  /* box-shadow: 2px 6px 25px #04AA69; */
+  transform: translate(0px, 0px);
+  transition: 0.6s ease transform, 0.6s box-shadow;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 23px;
+  width: 24px;
+  left: 5px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #50bfe6;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #50bfe6;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.rgbacolor{
+	background-image: linear-gradient(90deg, #855AFF 0%, #04AA69 100%);;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+	/* faq  */
+	.faq-container .question .faq-plus-icon {
+        display: block;
+        margin-top: 17px;
+      }
+      .faq-container .question.active .faq-plus-icon {
+        display: none;
+      }
+      .faq-container .question .faq-minus-icon {
+        display: none;
+        
+      }
+      .faq-container .question.active .faq-minus-icon {
+        display: block;
+      }
+      .faq-container .question.active {
+        transition: all 1;
+      }
+	   </style> 
+   </head>
+   <body>
+	<nav class="relative z-[999] bg-[#12141D] text-white py-0 sm:py-5">
+		<div class="max-w-[1170px] mx-auto px-5">
+		  <div class="flex justify-between items-center">
+			<div class="flex justify-center items-center">
+				<a  href="./index.html" rel="noopener noreferrer"
+			  ><img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/thVjIT9cev8yBLQvVgPK1690641259.webp" alt="logo"
+			/></a>
+			<ul class="hidden md:flex space-x-6 ml-[130px] py-5 text-[13px] font-medium text-gray-400 tracking-[-0.13px]">
+				<li class="relative flex items-center group">
+					<a class="" href="">Pricing</a>
+					<svg
+					class="ml-2 group-hover:rotate-180 transition-all duration-200 ease-in-out"
+					width="13"
+					height="8"
+					viewBox="0 0 13 8"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path
+					class="fill-[#686868] group-hover:fill-[#686868]"
+					d="M6.77833 7.5L13.0001 1.27778L11.5557 0L6.77833 4.5L2.05566 0L0.555664 1.27778L6.77833 7.5Z"
+					fill="white" />
+					</svg>
+					<div class="w-[160px] absolute hidden group-hover:block bg-white bg-opacity-100 top-full transition-all duration-500 ease-in-out rounded-[6px]">
+						<ul class="p-5 text-[13px]  text-black font-medium">
+							<a href="./pricing-page.html"><li>Pricing Page One</li></a>
+							<a href="./pricing-page-two.html"><li>Pricing Page Two</li></a>
+							<a href="./pricing-page-three.html"><li>Pricing Page Three</li></a>
+						</ul>
+					</div>
+				</li>
+				<li class="relative flex items-center group">
+					<a class="" href="">How it works</a>
+					<svg
+					class="ml-2 group-hover:rotate-180 transition-all duration-200 ease-in-out"
+					width="13"
+					height="8"
+					viewBox="0 0 13 8"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path
+					class="fill-[#686868] group-hover:fill-[#686868]"
+					d="M6.77833 7.5L13.0001 1.27778L11.5557 0L6.77833 4.5L2.05566 0L0.555664 1.27778L6.77833 7.5Z"
+					fill="white" />
+					</svg>
+					<div class="w-[170px] absolute hidden group-hover:block bg-white bg-opacity-100 top-full transition-all duration-500 ease-in-out rounded-[6px]">
+						<ul class="p-5 text-[13px]  text-black font-medium">
+							<a href="./how-it-work-one.html"><li>How it works One</li></a>
+							<a href="./how-it-work-two.html"><li>How it works Two</li></a>
+							<a href="./how-it-work-three.html"><li>How it works Three</li></a>
+						</ul>
+					</div>
+				</li>
+				<li class="relative flex items-center group">
+					<a class="" href="">Knowledge base</a>
+					<svg
+					class="ml-2 group-hover:rotate-180 transition-all duration-200 ease-in-out"
+					width="13"
+					height="8"
+					viewBox="0 0 13 8"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path
+					class="fill-[#686868] group-hover:fill-[#686868]"
+					d="M6.77833 7.5L13.0001 1.27778L11.5557 0L6.77833 4.5L2.05566 0L0.555664 1.27778L6.77833 7.5Z"
+					fill="white" />
+					</svg>
+					<div class="w-[170px] absolute hidden group-hover:block bg-white bg-opacity-100 top-full transition-all duration-500 ease-in-out rounded-[6px]">
+						<ul class="p-5 text-[13px]  text-black font-medium">
+							<a href="./knowledge-base-one.html"><li>Knowledge base One</li></a>
+							<a href="./knowledge-base-two.html"><li>Knowledge base Two</li></a>
+						</ul>
+					</div>
+				</li>
+				<li class="relative flex items-center group">
+					<a class="" href="">FAQ</a>
+					<svg
+					class="ml-2 group-hover:rotate-180 transition-all duration-200 ease-in-out"
+					width="13"
+					height="8"
+					viewBox="0 0 13 8"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path
+					class="fill-[#686868] group-hover:fill-[#686868]"
+					d="M6.77833 7.5L13.0001 1.27778L11.5557 0L6.77833 4.5L2.05566 0L0.555664 1.27778L6.77833 7.5Z"
+					fill="white" />
+					</svg>
+					<div class="w-[130px] absolute hidden group-hover:block bg-white bg-opacity-100 top-full transition-all duration-500 ease-in-out rounded-[6px]">
+						<ul class="p-5 text-[13px]  text-black font-medium">
+							<a href="./faq-page-one.html"><li>FAQ One</li></a>
+							<a href="./faq-page-two.html"><li>FAQ Two</li></a>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			</div>
+  
+			<div class="flex justify-center items-center">
+			<a href="#" class="px-[15px] py-2 mr-[18px] cursor-pointer text-center bg-[#1D1F29] hover:bg-[#FFFEFF] hover:text-black rounded-[4px] font-semibold text-base text-white hidden md:block">Sign in</a>
+			<a href="#" class="px-[15px] py-2  cursor-pointer  bg-[#FFFEFF] hover:bg-[#1D1F29] hover:text-white rounded-[4px] font-semibold text-center text-base text-black hidden md:block">Sign up</a>
+			</div>
+
+			<!-- Mobile menu icon -->
+			<div id="openMenuIcon" class="md:hidden inline-block cursor-pointer">
+			  <svg
+				width="24"
+				height="18"
+				viewBox="0 0 38 31"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<path
+				  fill-rule="evenodd"
+				  clip-rule="evenodd"
+				  d="M0 2C0 0.895431 0.895431 0 2 0H35.9478C37.0524 0 37.9478 0.895431 37.9478 2C37.9478 3.10457 37.0524 4 35.9478 4H2C0.895431 4 0 3.10457 0 2Z"
+				  fill="#ffffff"/>
+				<path
+				  fill-rule="evenodd"
+				  clip-rule="evenodd"
+				  d="M0 15.0233C0 13.9187 0.895431 13.0233 2 13.0233H35.9478C37.0524 13.0233 37.9478 13.9187 37.9478 15.0233C37.9478 16.1278 37.0524 17.0233 35.9478 17.0233H2C0.895431 17.0233 0 16.1278 0 15.0233Z"
+				  fill="#ffffff"/>
+				<path
+				  fill-rule="evenodd"
+				  clip-rule="evenodd"
+				  d="M0 28.0465C0 26.9419 0.895431 26.0465 2 26.0465H35.9478C37.0524 26.0465 37.9478 26.9419 37.9478 28.0465C37.9478 29.1511 37.0524 30.0465 35.9478 30.0465H2C0.895431 30.0465 0 29.1511 0 28.0465Z"
+				  fill="#ffffff"/>
+			  </svg>
+			</div>
+		  </div>
+		  <!-- Mobile menu -->
+		  <div class="md:hidden flex justify-center w-full ">
+			<div id="mobile-content" class="mobile-menu absolute top-0 w-full bg-[#23272C] px-5 pt-5">
+			  <!-- add hidden here later -->
+			  <div class="flex justify-between items-center">
+				  <a  href="/" rel="noopener noreferrer"
+				  ><img class="w-[150px] sm:w-[90px]" src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/thVjIT9cev8yBLQvVgPK1690641259.webp" alt="logo"
+				/></a>
+				  <div id="closeMenuIcon" class="md:hidden inline-block cursor-pointer">
+					  <svg
+						width="31"
+						height="30"
+						viewBox="0 0 31 30"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					  >
+						<path
+						  fill-rule="evenodd"
+						  clip-rule="evenodd"
+						  d="M1.42367 27.8804C0.6374 27.1046 0.6374 25.8468 1.42367 25.071L25.4095 1.40504C26.1958 0.629247 27.4706 0.629246 28.2568 1.40503C29.0431 2.18082 29.0431 3.43863 28.2568 4.21442L4.27102 27.8804C3.48475 28.6562 2.20995 28.6562 1.42367 27.8804Z"
+						  fill="#ffffff"
+						/>
+						<path
+						  fill-rule="evenodd"
+						  clip-rule="evenodd"
+						  d="M1.93793 1.40469C2.7242 0.628901 3.999 0.628901 4.78528 1.40469L28.7711 25.0707C29.5574 25.8465 29.5574 27.1043 28.7711 27.8801C27.9848 28.6559 26.71 28.6559 25.9238 27.8801L1.93793 4.21407C1.15166 3.43828 1.15166 2.18048 1.93793 1.40469Z"
+						  fill="#ffffff"
+						/>
+					  </svg>
+					</div>
+			  </div>
+			  <ul class="mt-4 leading-9 font-bold h-screen pt-5 relative">
+				<li class="relative flex items-center group">
+					<a class="" href="">Pricing</a>
+					<svg
+					class="ml-2 group-hover:rotate-180 transition-all duration-200 ease-in-out"
+					width="13"
+					height="8"
+					viewBox="0 0 13 8"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path
+					class="fill-[#686868] group-hover:fill-[#686868]"
+					d="M6.77833 7.5L13.0001 1.27778L11.5557 0L6.77833 4.5L2.05566 0L0.555664 1.27778L6.77833 7.5Z"
+					fill="white" />
+					</svg>
+					<div class="w-[200px] absolute hidden group-hover:block bg-white bg-opacity-100 top-full transition-all duration-500 ease-in-out">
+						<ul class="p-5">
+							<a href="./pricing-page.html"><li>Pricing One</li></a>
+							<a href="./pricing-page-two.html"><li>Pricing Two</li></a>
+							<a href="./pricing-page-three.html"><li>Pricing Three</li></a>
+						</ul>
+					</div>
+				</li>
+				<li class="relative flex items-center group">
+					<a class="" href="">How it works</a>
+					<svg
+					class="ml-2 group-hover:rotate-180 transition-all duration-200 ease-in-out"
+					width="13"
+					height="8"
+					viewBox="0 0 13 8"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path
+					class="fill-[#686868] group-hover:fill-[#686868]"
+					d="M6.77833 7.5L13.0001 1.27778L11.5557 0L6.77833 4.5L2.05566 0L0.555664 1.27778L6.77833 7.5Z"
+					fill="white" />
+					</svg>
+					<div class="w-[200px] absolute hidden group-hover:block bg-white bg-opacity-100 top-full transition-all duration-500 ease-in-out">
+						<ul class="p-5">
+							<a href="./how-it-work-one.html"><li>How it works One</li></a>
+							<a href="./how-it-work-two.html"><li>How it works Two</li></a>
+							<a href="./how-it-work-three.html"><li>How it works Three</li></a>
+						</ul>
+					</div>
+				</li>
+				<li class="relative flex items-center group">
+					<a class="" href="">Knowledge base</a>
+					<svg
+					class="ml-2 group-hover:rotate-180 transition-all duration-200 ease-in-out"
+					width="13"
+					height="8"
+					viewBox="0 0 13 8"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path
+					class="fill-[#686868] group-hover:fill-[#686868]"
+					d="M6.77833 7.5L13.0001 1.27778L11.5557 0L6.77833 4.5L2.05566 0L0.555664 1.27778L6.77833 7.5Z"
+					fill="white" />
+					</svg>
+					<div class="w-[200px] absolute hidden group-hover:block bg-white bg-opacity-100 top-full transition-all duration-500 ease-in-out">
+						<ul class="p-5">
+							<a href="./knowledge-base-one.html"><li>Knowledge base One</li></a>
+							<a href="./knowledge-base-two.html"><li>Knowledge base Two</li></a>
+						</ul>
+					</div>
+				</li>
+				<li class="relative flex items-center group">
+					<a class="" href="">FAQ</a>
+					<svg
+					class="ml-2 group-hover:rotate-180 transition-all duration-200 ease-in-out"
+					width="13"
+					height="8"
+					viewBox="0 0 13 8"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path
+					class="fill-[#686868] group-hover:fill-[#686868]"
+					d="M6.77833 7.5L13.0001 1.27778L11.5557 0L6.77833 4.5L2.05566 0L0.555664 1.27778L6.77833 7.5Z"
+					fill="white" />
+					</svg>
+					<div class="w-[200px] absolute hidden group-hover:block bg-white bg-opacity-100 top-full transition-all duration-500 ease-in-out">
+						<ul class="p-5">
+							<a href="./faq-page-one.html"><li>FAQ One</li></a>
+							<a href="./faq-page-two.html"><li>FAQ Two</li></a>
+						</ul>
+					</div>
+				</li>
+  
+				<li>
+					<a
+					href="#"
+					target="_blank"
+					class="w-[74px] h-[34px] cursor-pointer text-center bg-[#1D1F29] rounded-[4px] font-semibold text-base text-white hidden md:block"
+					>Sign in</a>
+				</li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+	  </nav>
+		
+	<main class="font-inter">
+		<section class="bg-[#12141D]">
+				<div class="max-w-[1440px] mx-auto ">
+					<div id="js-pricing-switch" class="text-center  pt-[14px] sm:pt-[16px] pb-[40px] sm:pb-[68px] relative">
+						<span class="switch-label js-switch-label-yearly active">
+							<span class=" font-normal text-[16px] sm:text-[20px]  rgbacolor">Yearly SAVE 20%</span>
+							<label class="switch">
+								<input type="checkbox" id="checbox" onclick="check()" ; />
+								<span class="slider round"></span>
+							  </label>
+						<span class="switch-label js-switch-label-monthly font-normal text-[#87888D] text-[16px] sm:text-[20px]">Monthly</span>
+						</span>
+			   <div class="flex justify-center mt-[40px] sm:mt-[70px]">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-[25px] gap-x-10 px-6 lg:px-8">
+					<!-- card-01 -------------- -->
+					<div class="w-[321px] h-[526px] bg-[#1E2029] rounded-[15px] drop-shadow-[0px_50px_160px_-40px_#000000] ">
+			
+						<div class=" p-8 rounded-2xl  flex flex-col text-left">
+							<p class="text-[20px] text-white font-medium pb-[24px]">Free</p>
+							<p class="relative text-sm font-bold pb-[16px]">
+								<span class="text1 text-[34px] font-bold tracking-[-0.68px]  leading-5 text-white ">$00</span> 
+								<span class="text2 text-[34px] font-bold tracking-[-0.68px]  leading-5 text-white ">$100</span>
+							</p>
+							<p class=" text-[#8C8F93] text-[16px] font-medium leading-5 pb-[40px]">Explore a limited version</p>
+							<a href="#" class=" block rounded-[8px] bg-[#04AA69] tracking-[-0.15px] w-[157px] h-[48px] px-6 pt-[13px] pb-[40px] text-white text-center font-semibold leading-normal">Start free trial</a>
+							<ul class="py-8 space-y-4 flex-1">
+								<li class="flex items-center text-[18px] tracking-[-0.18px] text-[#606266] leading-5">
+									<img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/eiTruxK4HfITvmOhWQBo1690638301.svg" alt="">
+									<span class="pl-4">B2B marketing</span>
+								</li>
+								<li class="flex items-center text-[18px] tracking-[-0.18px] text-[#606266] leading-5">
+								   <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/eiTruxK4HfITvmOhWQBo1690638301.svg" alt="">
+									<span class="pl-4">Cloud-based solution</span>
+								</li>
+								<li class="flex items-center text-[18px] tracking-[-0.18px] text-[#606266] leading-5">
+								   <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/eiTruxK4HfITvmOhWQBo1690638301.svg" alt="">
+									<span class="pl-4">Marketing strategies</span>
+								</li>
+								<li class="flex items-center text-[18px] pb-[18px] tracking-[-0.18px] text-[#606266] leading-5">
+								   <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/eiTruxK4HfITvmOhWQBo1690638301.svg" alt="">
+									<span class="pl-4">Automated follow up</span>
+								</li>
+								<a href="#" class=" block rounded-[6px] bg-[#2A2C34] tracking-[-0.14px] w-[243px] h-[40px] px-6 pt-[13px] pb-[40px] text-white text-center leading-normal">See all features</a>
+							</ul>
+							
+						</div>
+			
+					</div>
+			
+					<!-- card-02 ------------- -->
+					<div class="w-[321px] h-[526px] bg-[#1E2029]  rounded-[15px] ">
+			
+						<div class=" p-8 rounded-2xl  flex flex-col text-left">
+							<p class="text-[20px] text-white font-medium pb-[24px]">Free</p>
+							<p class="relative text-sm font-bold pb-[16px]">
+								<span class="text1 text-[34px] font-bold tracking-[-0.68px]  leading-5 text-white ">$129</span> 
+								<span class="text2 text-[34px] font-bold tracking-[-0.68px]  leading-5 text-white ">$200</span>
+							</p>
+							<p class=" text-[#8C8F93] text-[16px] font-medium leading-5 pb-[40px]">Perfect to get started</p>
+							<a href="#" class=" block rounded-[8px] bg-[#FF7661] tracking-[-0.15px] w-[157px] h-[48px] px-6 pt-[13px] pb-[40px] text-white text-center font-semibold leading-normal">Start free trial</a>
+			
+							<ul class="py-8 space-y-4 flex-1">
+								<li class="flex items-center text-[18px] tracking-[-0.18px] text-[#606266] leading-5">
+									<img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/iewXmNYyqy9u36l4D0T81690638317.svg" alt="">
+									<span class="pl-4">B2B marketing</span>
+								</li>
+								<li class="flex items-center text-[18px] tracking-[-0.18px] text-[#606266] leading-5">
+									<img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/iewXmNYyqy9u36l4D0T81690638317.svg" alt="">
+									<span class="pl-4">Cloud-based solution</span>
+								</li>
+								<li class="flex items-center text-[18px] tracking-[-0.18px] text-[#606266] leading-5">
+								   <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/iewXmNYyqy9u36l4D0T81690638317.svg" alt="">
+									<span class="pl-4">Marketing strategies</span>
+								</li>
+								<li class="flex items-center text-[18px] pb-[18px] tracking-[-0.18px] text-[#606266] leading-5">
+								   <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/iewXmNYyqy9u36l4D0T81690638317.svg" alt="">
+									<span class="pl-4">Automated follow up</span>
+								</li>
+								<a href="#" class=" block rounded-[6px] bg-[#2A2C34] tracking-[-0.14px] w-[243px] h-[40px] px-6 pt-[13px] pb-[40px] text-white text-center leading-normal">See all features</a>
+							</ul>
+						   
+						</div>
+			
+					</div>
+			
+					<!-- card-03 ------------- -->
+					<div class="w-[321px] h-[526px] bg-[#1E2029] rounded-[15px] ">
+			
+						<div class=" p-8 rounded-2xl  flex flex-col text-left">
+							<p class="text-[20px] text-white font-medium pb-[24px]">Free</p>
+							<p class="relative text-sm font-bold pb-[16px]">
+								<span class="text1 text-[34px] font-bold tracking-[-0.68px]  leading-5 text-white ">$199</span>
+								<span class="text2 text-[34px] font-bold tracking-[-0.68px]  leading-5 text-white ">$300</span>
+							 </p>
+							<p class=" text-[#8C8F93] text-[16px] font-medium leading-5 pb-[40px]">Best for professionals</p>
+							<a href="#" class=" block rounded-[8px] bg-[#855AFF] tracking-[-0.15px] w-[157px] h-[48px] px-6 pt-[13px] pb-[40px] text-white text-center font-semibold leading-normal">Start free trial</a>
+			
+							<ul class="py-8 space-y-4 flex-1">
+								<li class="flex items-center text-[18px] tracking-[-0.18px] text-[#606266] leading-5">
+									<img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/DoUoGPZ1OxEUqj2K1jcd1690638332.svg" alt="">
+									<span class="pl-4">B2B marketing</span>
+								</li>
+								<li class="flex items-center text-[18px] tracking-[-0.18px] text-[#606266] leading-5">
+								   <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/DoUoGPZ1OxEUqj2K1jcd1690638332.svg" alt="">
+									<span class="pl-4">Cloud-based solution</span>
+								</li>
+								<li class="flex items-center text-[18px] tracking-[-0.18px] text-[#606266] leading-5">
+								   <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/DoUoGPZ1OxEUqj2K1jcd1690638332.svg" alt="">
+									<span class="pl-4">Marketing strategies</span>
+								</li>
+								<li class="flex items-center text-[18px] pb-[18px] tracking-[-0.18px] text-[#606266] leading-5">
+								   <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/DoUoGPZ1OxEUqj2K1jcd1690638332.svg" alt="">
+									<span class="pl-4">Automated follow up</span>
+								</li>
+								<a href="#" class=" block rounded-[6px] bg-[#2A2C34] tracking-[-0.14px] w-[243px] h-[40px] px-6 pt-[13px] pb-[40px] text-white text-center leading-normal">See all features</a>
+							</ul>
+							
+						</div>
+					</div>
+				</div>
+			   </div>
+				</div>
+		</section>
+
+
+		
+
+			<!-- TRUSTED SECTION//// -->
+		<section class="bg-[#12141D] " >
+				<div class="max-w-[1440px] mx-auto py-[40px] sm:py-[55px] text-center">
+				 <h1 class=" text-white text-[26px] sm:text-[42px] font-bold leading-[32px] sm:leading-[46px] py-[55px]">Trusted and Loved by</h1>
+				 <div class=" w-[363px]  md:w-[760px] lg:w-[1010px] h-[302px] sm:h-[316px]  md:h-[330px] lg:h-[250px] xl:h-[116px] bg-[#1E2029] rounded-[20px] mx-auto ">
+				<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-y-[20px] gap-x-[19px] py-5 px-[25px]">
+						  <div class="w-[133px] sm:w-[189px]">
+							<img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/T8UuOEPp9B6Y2wLE1xgB1690641275.webp" alt="">
+						  </div>
+						  <div class="w-[133px] sm:w-[189px]">
+							<img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/abaPt77w8IzHy7uNTvbv1690467991.webp" alt="">
+						  </div>
+						  <div class="w-[133px] sm:w-[189px]">
+							<img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/thVjIT9cev8yBLQvVgPK1690641259.webp" alt="">
+						  </div>
+						  <div class="w-[133px] sm:w-[189px]">
+							<img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/wL7Wo2TJUJiMrpak0igA1690641266.webp" alt="">
+						  </div>
+						  <div class="w-[133px] sm:w-[189px]">
+							<img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/L8Br2u4yjj3ytOGCawOF1690641576.webp" alt="">
+						  </div>
+				   </div>
+				 </div>
+				</div>
+			</section>
+			<!-- FAQ SECTION ----- -->
+			<section class="flex justify-center items-center mx-auto px-5 bg-[#12141D]">
+				<div class="max-w-[1440px] mx-auto py-20">
+				  <h1 class="text-[26px] sm:text-[42px] text-center pb-[16px] text-white leading-[32px] font-bold">Frequently Asked Questions</h1>
+							  <p class="text-[12px] sm:text-[16px] text-[#696B76] font-normal leading-[24px] tracking-[-0.32px] mx-auto text-center pt-[16px] pb-[50px]">online sales tracker that tracks the success of your online sales efforts.</p>
+				  <div class="faq-container space-y-5 max-w-[1170px] bg-[#1E2029] py-[40px] sm:py-[50px] sm:px-[181px] rounded-[20px]">
+					<!-- faq-1  -->
+					<div id="container" class="question flex border-[1.5px] border-[#272932] gap-x-[30px] p-5 rounded-[8px] lg:w-[807px]">
+					  <div class="grow">
+						<h4 class="text-[16px] sm:text-[18px] font-semibold text-white rounded-t-lg  mb-3">
+						  What is nettracking?
+						</h4>
+						<p class="answer mt-2 leading-snug text-[#696B76] ">
+						  "NetTracking" is a very powerful Web 2.0 site search engine allows you to find.
+						</p>
+					  </div>
+					  <div class="cursor-pointer min-w-[24px] h-[24px] flex justify-center items-center">
+						<svg
+						  class="faq-plus-icon"
+						  width="24"
+						  height="24"
+						  viewBox="0 0 24 24"
+						  fill="none"
+						  xmlns="http://www.w3.org/2000/svg">
+						  <path d="M1 1L11.5 11L22 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+		
+						<svg
+						  class="faq-minus-icon"
+						  width="24"
+						  height="24"
+						  viewBox="0 0 24 24"
+						  fill="none"
+						  xmlns="http://www.w3.org/2000/svg">
+						  <circle cx="12" cy="12" r="11.25" stroke="white" stroke-width="1.5"/>
+						  <path d="M16 8L8 16" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+						  <path d="M8 8L16 16" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+						</svg>
+					  </div>
+					</div>               
+					<!-- faq-2  -->
+					<div id="container" class="question flex border-[1.5px] border-[#272932] gap-x-[30px] p-5 rounded-[8px] lg:w-[807px]">
+					  <div class="grow">
+						<h4 class="text-[16px] sm:text-[18px] font-semibold text-white rounded-t-lg  mb-3">
+						  Pacage tracking available?
+						</h4>
+						<p class="answer mt-2 leading-snug text-[#696B76] ">
+						  "However, if you have a tracking number from a shipping carrier like FedEx, UPS, USPS, DHL.
+						</p>
+					  </div>
+					  <div class="cursor-pointer min-w-[24px] h-[24px] flex justify-center items-center">
+						<svg
+						  class="faq-plus-icon"
+						  width="24"
+						  height="24"
+						  viewBox="0 0 24 24"
+						  fill="none"
+						  xmlns="http://www.w3.org/2000/svg">
+						  <path d="M1 1L11.5 11L22 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+		
+						<svg
+						  class="faq-minus-icon"
+						  width="24"
+						  height="24"
+						  viewBox="0 0 24 24"
+						  fill="none"
+						  xmlns="http://www.w3.org/2000/svg">
+						  <circle cx="12" cy="12" r="11.25" stroke="white" stroke-width="1.5"/>
+						  <path d="M16 8L8 16" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+						  <path d="M8 8L16 16" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+						</svg>
+					  </div>
+					</div>
+					<!-- faq-3  -->
+					<div id="container" class="question flex border-[1.5px] border-[#272932] gap-x-[30px] p-5 rounded-[8px] lg:w-[807px]">
+					  <div class="grow">
+						<h4 class="text-[16px] sm:text-[18px] font-semibold text-white rounded-t-lg  mb-3">
+						  What is the best solution in this platform?
+						</h4>
+						<p class="answer mt-2 leading-snug text-[#696B76] ">
+						  "you can ask for assistance with coding problems, explanations of programming concepts.
+						</p>
+					  </div>
+					  <div class="cursor-pointer min-w-[24px] h-[24px] flex justify-center items-center">
+						<svg
+						  class="faq-plus-icon"
+						  width="24"
+						  height="24"
+						  viewBox="0 0 24 24"
+						  fill="none"
+						  xmlns="http://www.w3.org/2000/svg">
+						  <path d="M1 1L11.5 11L22 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+		
+						<svg
+						  class="faq-minus-icon"
+						  width="24"
+						  height="24"
+						  viewBox="0 0 24 24"
+						  fill="none"
+						  xmlns="http://www.w3.org/2000/svg">
+						  <circle cx="12" cy="12" r="11.25" stroke="white" stroke-width="1.5"/>
+						  <path d="M16 8L8 16" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+						  <path d="M8 8L16 16" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+						</svg>
+					  </div>
+					</div>
+					<!-- faq-4  -->
+					<div id="container" class="question flex border-[1.5px] border-[#272932] gap-x-[30px] p-5 rounded-[8px] lg:w-[807px]">
+					  <div class="grow">
+						<h4 class="text-[16px] sm:text-[18px] font-semibold text-white rounded-t-lg  mb-3">
+						  Marketing friendly?
+						</h4>
+						<p class="answer mt-2 leading-snug text-[#696B76] ">
+						  "If you're considering A/B testing different marketing strategies, the platform can help you.
+						</p>
+					  </div>
+					  <div class="cursor-pointer min-w-[24px] h-[24px] flex justify-center items-center">
+						<svg
+						  class="faq-plus-icon"
+						  width="24"
+						  height="24"
+						  viewBox="0 0 24 24"
+						  fill="none"
+						  xmlns="http://www.w3.org/2000/svg">
+						  <path d="M1 1L11.5 11L22 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+		
+						<svg
+						  class="faq-minus-icon"
+						  width="24"
+						  height="24"
+						  viewBox="0 0 24 24"
+						  fill="none"
+						  xmlns="http://www.w3.org/2000/svg">
+						  <circle cx="12" cy="12" r="11.25" stroke="white" stroke-width="1.5"/>
+						  <path d="M16 8L8 16" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+						  <path d="M8 8L16 16" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+						</svg>
+					  </div>
+					</div>	
+					<!-- faq -5 -->
+					<div id="container" class="question flex border-[1.5px] border-[#272932] gap-x-[30px] p-5 rounded-[8px] lg:w-[807px]">
+					  <div class="grow">
+						<h4 class="text-[16px] sm:text-[18px] font-semibold text-white rounded-t-lg  mb-3">
+						  It be automatically charged after the free trial?
+						</h4>
+						<p class="answer mt-2 leading-snug text-[#696B76] ">
+						  "Many online services that offer typically require you to enter your payment information.
+						</p>
+					  </div>
+					  <div class="cursor-pointer min-w-[24px] h-[24px] flex justify-center items-center">
+						<svg
+						  class="faq-plus-icon"
+						  width="24"
+						  height="24"
+						  viewBox="0 0 24 24"
+						  fill="none"
+						  xmlns="http://www.w3.org/2000/svg">
+						  <path d="M1 1L11.5 11L22 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+		
+						<svg
+						  class="faq-minus-icon"
+						  width="24"
+						  height="24"
+						  viewBox="0 0 24 24"
+						  fill="none"
+						  xmlns="http://www.w3.org/2000/svg">
+						  <circle cx="12" cy="12" r="11.25" stroke="white" stroke-width="1.5"/>
+						  <path d="M16 8L8 16" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+						  <path d="M8 8L16 16" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+						</svg>
+					  </div>
+					</div>
+					<!-- faq-6  -->
+					<div id="container" class="question flex border-[1.5px] border-[#272932] gap-x-[30px] p-5 rounded-[8px] lg:w-[807px]">
+					  <div class="grow">
+						<h4 class="text-[16px] sm:text-[18px] font-semibold text-white rounded-t-lg  mb-3">
+						  How can I switch to annual billing?
+						</h4>
+						<p class="answer mt-2 leading-snug text-[#696B76] ">
+						  Follow the prompts to confirm your decision to switch to annual billing. 
+						</p>
+					  </div>
+					  <div class="cursor-pointer min-w-[24px] h-[24px] flex justify-center items-center">
+						<svg
+						  class="faq-plus-icon"
+						  width="24"
+						  height="24"
+						  viewBox="0 0 24 24"
+						  fill="none"
+						  xmlns="http://www.w3.org/2000/svg">
+						  <path d="M1 1L11.5 11L22 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+		
+						<svg
+						  class="faq-minus-icon"
+						  width="24"
+						  height="24"
+						  viewBox="0 0 24 24"
+						  fill="none"
+						  xmlns="http://www.w3.org/2000/svg">
+						  <circle cx="12" cy="12" r="11.25" stroke="white" stroke-width="1.5"/>
+						  <path d="M16 8L8 16" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+						  <path d="M8 8L16 16" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+						</svg>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </section>
+		</main>
+
+			<!-- FOOTER SECTION ------ -->
+		<footer class="bg-[#12141D] pt-[40px] sm:pt-[109px]">
+			<div class="container mx-auto px-4">
+			  <div class="flex flex-wrap justify-between items-top max-w-[1170px] mx-auto">
+				<!-- Column 1 -->
+				<div class="w-full md:w-1/4 px-4">
+				  <h4 class="text-2xl font-bold pb-2 text-white">Nettracking</h4>
+				  <p class="max-w-[209px] text-sm text-[#696B76] pb-4">
+					We saw our customers confusing us with some of the other companies in the industry
+				  </p>
+				  <div class="flex pt-4">
+					<button class="bg-white shadow-lg font-normal h-10 w-10 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+					  <i class="fab fa-twitter"></i>
+					</button>
+					<button class="bg-white shadow-lg font-normal h-10 w-10 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+					  <i class="fab fa-facebook-square"></i>
+					</button>
+					<button class="bg-white shadow-lg font-normal h-10 w-10 flex items-center justify-center align-center rounded-full outline-none focus:outline-none" type="button">
+					  <i class="fab fa-instagram"></i>
+					</button>
+				  </div>
+				</div>
+				<!-- Column 2 -->
+				<div class="w-full md:w-1/4 px-4">
+				  <span class="block pb-4 text-white text-lg font-medium">Product</span>
+				  <ul class="list-none">
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Product</a>
+					</li>
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Features</a>
+					</li>
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Pricing</a>
+					</li>
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Case Studies</a>
+					</li>
+				  </ul>
+				</div>
+				<!-- Column 3 -->
+				<div class="w-full md:w-1/4 px-4">
+				  <span class="block pb-4 text-white text-lg font-medium">Service</span>
+				  <ul class="list-none">
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Blog</a>
+					</li>
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Road Map</a>
+					</li>
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Testimonials</a>
+					</li>
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Good Tear</a>
+					</li>
+				  </ul>
+				</div>
+				<!-- Column 4 -->
+				<div class="w-full md:w-1/4 px-4">
+				  <span class="block pb-4 text-white text-lg font-medium">Solutions</span>
+				  <ul class="list-none">
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Process Management</a>
+					</li>
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Request Management</a>
+					</li>
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Workflow Management</a>
+					</li>
+					<li>
+					  <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Finance</a>
+					</li>
+				  </ul>
+				</div>
+			  </div>
+			</div>
+			<div class="bg-[#1E2029]">
+			  <div class="container mx-auto">
+				<div class="py-4 text-center text-[#5A5C68] text-sm font-normal">
+				  <p>
+					<a href="#" class="hover:text-white">&copy; Copyright 2021 by UIHUT. All rights reserved.</a>
+				  </p>
+				</div>
+			  </div>
+			</div>
+		</footer>
+
+		  <!-- faq's js  -->
+		  <script>
+			(function () {
+		/**
+		 * hide FAQ's all answers without clicked question's answer
+		 * @param questions
+		 * @param avoidableIndex
+		 * @param faqAnswerControlBy
+		 **/
+		function hideOthersAnswer(questions, avoidableIndex, faqAnswerControlBy) {
+		  questions.forEach((question, i) => {
+			if (i !== avoidableIndex) {
+			  let answerArea = selectAnswerForToggle(question);
+	  
+			  if (faqAnswerControlBy === "style") {
+				answerArea.style.height = "0px";
+			  }
+	  
+			  answerArea?.classList.remove("active");
+			  question?.classList.remove("active");
+			}
+		  });
+		}
+	  
+		/**
+		 * select answer element of clicked question. Answer may place inside question element or after question element.
+		 * @param question
+		  @returns {null|Element|}
+		 */
+		function selectAnswerForToggle(question) {
+		  let answerFromInside = question.querySelector(".answer");
+		  if (answerFromInside) {
+			return answerFromInside;
+		  }
+	  
+		  let answerFromNextElement = question.nextElementSibling;
+		  if (answerFromNextElement && answerFromNextElement.matches(".answer")) {
+			return answerFromNextElement;
+		  }
+	  
+		  return null;
+		}
+	  
+		/* select all faq container */
+		let faqContainers = document.querySelectorAll(".faq-container");
+	  
+		if (faqContainers.length) {
+		  let defaultFaqOptions = {
+			slide_speed: 300, // expected value  numeric milliseconds
+			close_others: true, // expected value 'true', 'false'
+			answer_control_by: "style", // expected value 'class', 'style'
+			active_all: false,
+		  };
+	  
+		  faqContainers.forEach((faqContainer) => {
+			let faqAnswerSlideSpeed = faqContainer.hasAttribute("slide_speed")
+			  ? parseInt(faqContainer.getAttribute("slide_speed"))
+			  : defaultFaqOptions.slide_speed;
+	  
+			let faqCloseOtherAnswer = faqContainer.hasAttribute("close_others")
+			  ? faqContainer.getAttribute("close_others") == "true"
+			  : defaultFaqOptions.close_others;
+	  
+			let faqAnswerControlBy = faqContainer.hasAttribute("answer_control_by")
+			  ? faqContainer.getAttribute("answer_control_by")
+			  : defaultFaqOptions.answer_control_by;
+			let faqActiveAll =
+			  faqContainer.hasAttribute("active_all") && faqContainer.getAttribute("active_all") === "true"
+				? true
+				: defaultFaqOptions.active_all;
+	  
+			let questions = faqContainer.querySelectorAll(".question");
+	  
+			questions.forEach((question, i) => {
+			  let answerArea = selectAnswerForToggle(question);
+	  
+			  let answerAreaHeight = answerArea.getBoundingClientRect().height;
+	  
+			  let defaultActive = question.hasAttribute("data-active") || question.classList.contains("active");
+	  
+			  /**
+			   * add some style for slide-up & down transition when answerControlBy value is 'style' (default).
+			   */
+			  if (faqAnswerControlBy === "style") {
+				answerArea.style.cssText = `
+				  overflow: hidden;
+				  transition: height ${faqAnswerSlideSpeed}ms ease-in;
+				`;
+				answerArea.style.height = "0px";
+			  }
+	  
+			  if (faqActiveAll || defaultActive) {
+				answerArea.classList.add("active");
+				question.classList.add("active");
+	  
+				if (faqAnswerControlBy === "style") {
+				  answerArea.style.height = answerAreaHeight + "px";
+				}
+			  }
+	  
+			  question.addEventListener("click", function () {
+				answerArea.classList.toggle("active");
+				question.classList.toggle("active");
+	  
+				if (faqAnswerControlBy === "style") {
+				  if (answerArea.style.height === "0px") {
+					answerArea.style.height = answerAreaHeight + "px";
+				  } else {
+					answerArea.style.height = "0px";
+				  }
+				}
+	  
+				if (faqCloseOtherAnswer) {
+				  hideOthersAnswer(questions, i, faqAnswerControlBy);
+				}
+			  });
+			});
+		  });
+		}
+	  })();
+		  </script>
+
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="./include-html.js"></script>
+		<script src="./app.js"></script>
+
+		  <!-- pricing js  -->
+		<script>
+		function check() {
+  var checkBox = document.getElementById("checbox");
+  var text1 = document.getElementsByClassName("text1");
+  var text2 = document.getElementsByClassName("text2");
+
+  for (var i = 0; i < text1.length; i++) {
+    if (checkBox.checked == true) {
+      text1[i].style.display = "block";
+      text2[i].style.display = "none";
+    } else if (checkBox.checked == false) {
+      text1[i].style.display = "none";
+      text2[i].style.display = "block";
+    }
+  }
+}
+check();
+		</script>
+
+		
+	</body>
+</html>

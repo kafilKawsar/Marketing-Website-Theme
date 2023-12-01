@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  
+}
+
+
+
+.tips-and-tricks-slider .swiper-button-next{
+    @apply left-[90%] after:content-[url("https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/9s1vICtr3FFiSOu77S501691076321.svg")];
+  }
+  .tips-and-tricks-slider .swiper-button-prev{
+    @apply left-[95%] after:content-[url("https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/9s1vICtr3FFiSOu77S501691076321.svg")] rotate-180;
+  }
+  .tips-and-tricks-slider .swiper-button-next, .tips-and-tricks-slider .swiper-button-prev{
+    @apply top-[95%];
+  }
+  .tips-and-tricks-slider .swiper-slide{
+    @apply min-h-[472px] border border-dark rounded-lg;
+  }
+ 
